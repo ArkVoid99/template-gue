@@ -1,23 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-28 px-4 max-w-7xl mx-auto text-center overflow-hidden">
-      {/* Glow lebih kuat + grid background */}
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-4 max-w-7xl mx-auto text-center overflow-hidden">
+      {/* Glow Background */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-8xl" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-8xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.04),transparent_70%)]" />
-      </div>
-
-      {/* Floating card kecil */}
-      <div className="absolute top-20 right-10 md:right-20 opacity-20 md:opacity-30 pointer-events-none">
-        <div className="w-32 h-40 bg-[#111] border border-[#222] rounded-xl rotate-6 shadow-lg" />
-      </div>
-      <div className="absolute bottom-10 left-10 md:left-20 opacity-20 md:opacity-30 pointer-events-none">
-        <div className="w-24 h-32 bg-[#111] border border-[#222] rounded-xl -rotate-3 shadow-lg" />
       </div>
 
       {/* Badge */}
@@ -30,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Headline */}
-      <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-[0.95] max-w-5xl mx-auto">
+      <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-[0.95] max-w-4xl mx-auto">
         Build stunning products with{' '}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
           premium templates
@@ -39,16 +31,18 @@ export default function Hero() {
 
       {/* Subheadline */}
       <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-        Beautifully crafted Next.js & Tailwind templates for modern developers, startups, and creators. Save weeks of development time.
+        Beautifully crafted Next.js & Tailwind templates for modern developers, startups, and creators.
       </p>
 
-      {/* CTA Buttons PREMIUM */}
+      {/* CTA Buttons */}
       <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="#templates"
-          className="group relative px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_40px_rgba(124,58,237,0.5)]"
+          href="https://kazuharate.gumroad.com/l/nexfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(124,58,237,0.35)] hover:shadow-[0_0_40px_rgba(124,58,237,0.5)]"
         >
-          Browse Templates
+          Get Nexfolio Now
         </a>
         <a
           href="#preview"
@@ -56,6 +50,26 @@ export default function Hero() {
         >
           Live Preview
         </a>
+      </div>
+
+      {/* LAPTOP MOCKUP CENTERPIECE */}
+      <div className="mt-16 md:mt-20 max-w-4xl mx-auto relative group">
+        {/* Bingkai Laptop */}
+        <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl">
+          {/* Kamera Laptop */}
+          <div className="rounded-b-lg overflow-hidden">
+            <Image
+              src="/images/page1.png"
+              alt="Nexfolio Template Preview"
+              width={1200}
+              height={750}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+        {/* Bagian Bawah Laptop */}
+        <div className="relative mx-auto bg-gray-700/50 dark:bg-gray-800 rounded-b-xl rounded-t-sm h-6 max-w-[105%] -mt-1"></div>
       </div>
 
       {/* Stats + Trust */}
