@@ -52,26 +52,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* LAPTOP MOCKUP CENTERPIECE */}
-      <div className="mt-16 md:mt-20 max-w-4xl mx-auto relative group">
-        {/* Bingkai Laptop */}
-        <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl">
-          {/* Kamera Laptop */}
-          <div className="rounded-b-lg overflow-hidden">
-            <Image
-              src="/images/page1.png"
-              alt="Nexfolio Template Preview"
-              width={1200}
-              height={750}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-        </div>
-        {/* Bagian Bawah Laptop */}
-        <div className="relative mx-auto bg-gray-700/50 dark:bg-gray-800 rounded-b-xl rounded-t-sm h-6 max-w-[105%] -mt-1"></div>
-      </div>
-
       {/* Stats + Trust */}
       <div className="mt-16 flex flex-wrap justify-center gap-8 text-gray-500 text-sm">
         <div className="flex items-center gap-2">
